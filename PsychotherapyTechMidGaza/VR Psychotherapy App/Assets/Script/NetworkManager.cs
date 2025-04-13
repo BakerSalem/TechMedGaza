@@ -55,16 +55,10 @@ public class NetworkManager : MonoBehaviour
             cardsControl.OnCardSync(cardData.ID);
         });
 
-        SocketIO.On("showAllCards", _ =>
+        SocketIO.On("flipAllCards", _ =>
         {
             Debug.Log("Received Show All Cards");
-            cardsControl.ShowAllCards();
-        });
-
-        SocketIO.On("hideAllCards", _ =>
-        {
-            Debug.Log("Received Hide All Cards");
-            cardsControl.HideAllCards();
+            cardsControl.FlipAllCards();
         });
 
         SocketIO.On("startPandol", _ =>
@@ -154,7 +148,6 @@ public class NetworkManager : MonoBehaviour
 
         SocketIO.Emit("appSelect", new JSONObject(json));
     }
-
     public void FlipCardSend(string id)
     {
         CardJson cardData = new CardJson { ID = id };
@@ -163,14 +156,9 @@ public class NetworkManager : MonoBehaviour
 
         SocketIO.Emit("cardFlip", new JSONObject(json));
     }
-    public void SendShowAllCards()
+    public void FlipAllCardsSend()
     {
-        SocketIO.Emit("showAllCards");
-    }
-
-    public void SendHideAllCards()
-    {
-        SocketIO.Emit("hideAllCards");
+        SocketIO.Emit("flipAllCards");
     }
 
     public void CarSpeedSend(CarJson carData)

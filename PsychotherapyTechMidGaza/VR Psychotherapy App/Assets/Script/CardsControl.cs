@@ -4,6 +4,7 @@ using UnityEngine;
 public class CardsControl : MonoBehaviour
 {
     [SerializeField] GameObject[] Cards;
+    private bool flipped = false;
     public void OnCardSync(string id)
     {
         foreach (var card in Cards)
@@ -15,19 +16,17 @@ public class CardsControl : MonoBehaviour
         }
     }
 
-    public void ShowAllCards()
+    public void FlipAllCards()
     {
-        foreach (var card in Cards)
+        foreach (GameObject cardGroup in Cards)
         {
-            card.SetActive(true);
+            CardManager[] cardManagers = cardGroup.GetComponentsInChildren<CardManager>();
+            foreach (CardManager manager in cardManagers)
+            {
+                manager.FlipCard();
+            }
         }
-    }
 
-    public void HideAllCards()
-    {
-        foreach (var card in Cards)
-        {
-            card.SetActive(false);
-        }
+        flipped = !flipped;
     }
 }
