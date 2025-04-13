@@ -1,0 +1,19 @@
+# ninja log v5
+67	2239	7640900212693085	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	7809025ad1886bea
+19	2280	7640900213151247	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	2259130739b3bc
+76	2553	7640900215898603	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	39b51ac5ca043e71
+41	2338	7640900213648285	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	64ca2c08fe02b1d6
+3231	3420	7640900224671790	C:/Users/Mahmood/Desktop/Unity Projects/VR Psychotherapy App/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/62324ec4/obj/arm64-v8a/libgame.so	5091f6ef818749c6
+32	2628	7640900216668280	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	1df8750026c762fb
+60	2337	7640900213705669	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	a12b5a0621142b25
+52	2972	7640900220149388	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	ee8eb985f7556a01
+9	3230	7640900222694064	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	c9ef3d539b32c0e3
+35	1341	7641010290453279	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	7809025ad1886bea
+31	1359	7641010290671129	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	a12b5a0621142b25
+11	1361	7641010290645930	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	64ca2c08fe02b1d6
+16	1414	7641010291221332	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	2259130739b3bc
+41	1463	7641010291753293	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	39b51ac5ca043e71
+21	1508	7641010292201051	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	1df8750026c762fb
+26	1605	7641010293135876	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	ee8eb985f7556a01
+4	1700	7641010294142139	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	c9ef3d539b32c0e3
+1700	1870	7641010295862766	C:/Users/Mahmood/Desktop/Unity Projects/VR Psychotherapy App/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/62324ec4/obj/arm64-v8a/libgame.so	5091f6ef818749c6
