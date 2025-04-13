@@ -160,7 +160,6 @@ public class NetworkManager : MonoBehaviour
     {
         SocketIO.Emit("flipAllCards");
     }
-
     public void CarSpeedSend(CarJson carData)
     {
         string json = JsonUtility.ToJson(carData);

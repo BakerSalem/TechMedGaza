@@ -1,0 +1,2 @@
+D:\Unity Project\TechMedGaza\PsychotherapyTechMidGaza\VR Psychotherapy App\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+D:\Unity Project\TechMedGaza\PsychotherapyTechMidGaza\VR Psychotherapy App\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
