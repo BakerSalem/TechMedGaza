@@ -14,6 +14,7 @@ public class NetworkManager : MonoBehaviour
     public PandolManager pandolManager;
     public CardsControl cardsControl;
     public CarManager carManager;
+    public VoiceToggle voiceToggle;
 
 
     private void Start()
@@ -83,7 +84,7 @@ public class NetworkManager : MonoBehaviour
         SocketIO.On("carStart", _ =>
         {
             Debug.Log("Received Car Start ");
-            carManager.StartAnimation(); 
+            carManager.StartAnimation();
 
         });
 
@@ -96,6 +97,18 @@ public class NetworkManager : MonoBehaviour
         {
             Debug.Log("Received Car Restart ");
             carManager.RestartAnimation();
+        });
+
+        SocketIO.On("startVoice", _ =>
+        {
+            Debug.Log("Received Start Voice ");
+            voiceToggle.StartVoice();
+        });
+
+        SocketIO.On("stopVoice", _ =>
+        {
+            Debug.Log("Received Stop Voice ");
+            voiceToggle.StopVoice();
         });
     }
 
@@ -189,8 +202,14 @@ public class NetworkManager : MonoBehaviour
     {
         SocketIO.Emit("carRestart");
     }
-
-    
+    public void VoiceStartSend()
+    {
+        SocketIO.Emit("startVoice");
+    }
+    public void VoiceStopSend()
+    {
+        SocketIO.Emit("stopVoice");
+    }
 }
 
 

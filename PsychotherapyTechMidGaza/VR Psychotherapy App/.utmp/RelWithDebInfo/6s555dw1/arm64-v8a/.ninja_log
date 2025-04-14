@@ -1,19 +1,19 @@
 # ninja log v5
-23	5344	7662676404637325	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	f33b449e318b059
-7239	7671	7662676428751427	D:/Unity Project/TechMedGaza/PsychotherapyTechMidGaza/VR Psychotherapy App/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6s555dw1/obj/arm64-v8a/libgame.so	1bcfb025e2b8c4b5
-49	6018	7662676411914109	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	9c4d39cb80a6b95
-1	5596	7662676406821750	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	18ac7477ce16a1be
-10	6263	7662676414412872	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	eb8398d31c3aa8c9
-42	5598	7662676407844174	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	ee03e56b0c32ad2f
-30	5969	7662676411305170	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	df4da5cdea9c93b0
-36	6626	7662676418342187	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	ab340646337f6beb
-17	7238	7662676423596387	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	40ab43223129e253
-14	4300	7662685366337948	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	df4da5cdea9c93b0
 44	4405	7662685367734477	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	f33b449e318b059
+5908	6065	7662685384640286	D:/Unity Project/TechMedGaza/PsychotherapyTechMidGaza/VR Psychotherapy App/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6s555dw1/obj/arm64-v8a/libgame.so	1bcfb025e2b8c4b5
 26	4616	7662685369694643	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	18ac7477ce16a1be
-38	4676	7662685370517594	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	ee03e56b0c32ad2f
 52	4767	7662685371484999	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	9c4d39cb80a6b95
+38	4676	7662685370517594	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	ee03e56b0c32ad2f
 5	5023	7662685374068454	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	eb8398d31c3aa8c9
+14	4300	7662685366337948	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	df4da5cdea9c93b0
 32	5170	7662685375491410	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	ab340646337f6beb
 20	5907	7662685382976465	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	40ab43223129e253
-5908	6065	7662685384640286	D:/Unity Project/TechMedGaza/PsychotherapyTechMidGaza/VR Psychotherapy App/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6s555dw1/obj/arm64-v8a/libgame.so	1bcfb025e2b8c4b5
+32	5498	7663378402194724	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	f33b449e318b059
+13	6239	7663378408923278	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	df4da5cdea9c93b0
+19	6241	7663378406235349	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	18ac7477ce16a1be
+38	6258	7663378406714065	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	ee03e56b0c32ad2f
+53	6282	7663378412040388	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	9c4d39cb80a6b95
+5	6430	7663378413646395	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	eb8398d31c3aa8c9
+46	7044	7663378419743386	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	ab340646337f6beb
+25	7495	7663378424252220	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	40ab43223129e253
+7496	8567	7663378434819001	D:/Unity Project/TechMedGaza/PsychotherapyTechMidGaza/VR Psychotherapy App/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6s555dw1/obj/arm64-v8a/libgame.so	1bcfb025e2b8c4b5
