@@ -2,6 +2,9 @@ using SocketIO;
 using UnityEngine;
 using static JsonClasses;
 
+
+
+
 public class NetworkManager : MonoBehaviour
 {
     public SocketIOComponent SocketIO;
@@ -9,6 +12,10 @@ public class NetworkManager : MonoBehaviour
     public Transform adminCamera;
     public GameObject playerBody;
     public Transform[] applications;
+    public Transform leftHandTransform;
+    public Transform rightHandTransform;
+    public Transform adminLeftHand;
+    public Transform adminRightHand;
     public bool canSync;
 
     public PandolManager pandolManager;
@@ -24,6 +31,12 @@ public class NetworkManager : MonoBehaviour
             //Debug.Log("Received Camera Update: " + response);
             CameraData camData = JsonUtility.FromJson<CameraData>(response.data.ToString());
             ApplyCameraData(camData);
+        });
+
+        SocketIO.On("handUpdate", (response) =>
+        {
+            HandData handData = JsonUtility.FromJson<HandData>(response.data.ToString());
+            ApplyHandData(handData);
         });
 
         SocketIO.On("appSelect", (response) =>
@@ -115,21 +128,52 @@ public class NetworkManager : MonoBehaviour
     private void Update()
     {
         SendCameraData();
+        SendHandData();
     }
     public void SendCameraData()
     {
         if (canSync)
         {
-            CameraData camData = new CameraData
+            CameraData camData = new()
             {
                 position = new float[] { camTransform.position.x, camTransform.position.y, camTransform.position.z },
                 rotation = new float[] { camTransform.eulerAngles.x, camTransform.eulerAngles.y, camTransform.eulerAngles.z }
             };
 
             string json = JsonUtility.ToJson(camData);
-
-
             SocketIO.Emit("cameraUpdate", new JSONObject(json));
+        }
+    }
+    public void SendHandData()
+    {
+        if (canSync)
+        {
+            HandData handData = new()
+            {
+                leftPosition = new float[] {
+                leftHandTransform.position.x,
+                leftHandTransform.position.y,
+                leftHandTransform.position.z
+            },
+                leftRotation = new float[] {
+                leftHandTransform.eulerAngles.x,
+                leftHandTransform.eulerAngles.y,
+                leftHandTransform.eulerAngles.z,
+            },
+                rightPosition = new float[] {
+                rightHandTransform.position.x,
+                rightHandTransform.position.y,
+                rightHandTransform.position.z
+            },
+                rightRotation = new float[] {
+                rightHandTransform.eulerAngles.x,
+                rightHandTransform.eulerAngles.y,
+                rightHandTransform.eulerAngles.z,
+            }
+            };
+
+            string json = JsonUtility.ToJson(handData);
+            SocketIO.Emit("handUpdate", new JSONObject(json));
         }
     }
 
@@ -139,6 +183,18 @@ public class NetworkManager : MonoBehaviour
         adminCamera.transform.position = new Vector3(camData.position[0], camData.position[1], camData.position[2]);
         adminCamera.transform.eulerAngles = new Vector3(camData.rotation[0], camData.rotation[1], camData.rotation[2]); ;
     }
+    private void ApplyHandData(HandData data)
+    {
+        adminLeftHand.gameObject.SetActive(true);
+        adminRightHand.gameObject.SetActive(true);
+
+        adminLeftHand.transform.position = new Vector3(data.leftPosition[0], data.leftPosition[1], data.leftPosition[2]);
+        adminLeftHand.eulerAngles = new Vector3(data.leftRotation[0], data.leftRotation[1], data.leftRotation[2]);
+
+        adminRightHand.transform.position = new Vector3(data.rightPosition[0], data.rightPosition[1], data.rightPosition[2]);
+        adminRightHand.eulerAngles = new Vector3(data.rightRotation[0], data.rightRotation[1], data.rightRotation[2]);
+    }
+
 
     public void SendApplication(string appID)
     {

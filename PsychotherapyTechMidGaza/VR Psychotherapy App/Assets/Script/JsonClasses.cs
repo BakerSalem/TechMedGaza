@@ -9,6 +9,15 @@ public class JsonClasses
         public float[] rotation;
     }
 
+    [System.Serializable]
+    public class HandData
+    {
+        public float[] leftPosition;
+        public float[] leftRotation;
+        public float[] rightPosition;
+        public float[] rightRotation;
+    }
+
     [Serializable]
     public class AppJson
     {

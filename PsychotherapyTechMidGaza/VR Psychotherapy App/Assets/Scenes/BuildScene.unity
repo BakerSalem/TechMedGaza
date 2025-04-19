@@ -13837,13 +13837,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1518818067}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.075, y: 0.055, z: -0.0264}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.0944, y: 0.0326, z: -0.0316}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 966560132}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &1518818069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13856,7 +13856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb7fb592b977bab488745856389a4aef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockPrefab: {fileID: 5497595852243381254, guid: ed57fec1ade3d7149941ec6c2034d7dd, type: 3}
+  blockPrefab: {fileID: 5676255461702498793, guid: 34c2f9b9e5e86104db39cc6cae57f542, type: 3}
   DetectHand: {fileID: 966560138}
   handHoldPoint: {fileID: 1518818068}
 --- !u!1 &1521523940
@@ -15097,6 +15097,8 @@ MonoBehaviour:
   - {fileID: 711787557}
   - {fileID: 1364283756}
   - {fileID: 699883158}
+  leftHandTransform: {fileID: 611313053}
+  rightHandTransform: {fileID: 1981967841}
   canSync: 0
   pandolManager: {fileID: 1364283757}
   cardsControl: {fileID: 711787558}
