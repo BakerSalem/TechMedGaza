@@ -19,6 +19,11 @@ public class JsonClasses
     }
 
     [Serializable]
+    public class HandObjectData
+    {
+        public string hand;
+        public bool isActive;
+    }
     public class AppJson
     {
         public string ID;

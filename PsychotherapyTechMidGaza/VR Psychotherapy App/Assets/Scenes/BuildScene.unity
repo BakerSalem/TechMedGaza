@@ -13859,6 +13859,7 @@ MonoBehaviour:
   blockPrefab: {fileID: 5676255461702498793, guid: 34c2f9b9e5e86104db39cc6cae57f542, type: 3}
   DetectHand: {fileID: 966560138}
   handHoldPoint: {fileID: 1518818068}
+  handType: left
 --- !u!1 &1521523940
 GameObject:
   m_ObjectHideFlags: 0
@@ -15099,7 +15100,11 @@ MonoBehaviour:
   - {fileID: 699883158}
   leftHandTransform: {fileID: 611313053}
   rightHandTransform: {fileID: 1981967841}
+  adminLeftHand: {fileID: 0}
+  adminRightHand: {fileID: 0}
   canSync: 0
+  adminRose: {fileID: 1666317361}
+  adminCandle: {fileID: 1518818067}
   pandolManager: {fileID: 1364283757}
   cardsControl: {fileID: 711787558}
   carManager: {fileID: 1631892847}
@@ -15261,6 +15266,7 @@ MonoBehaviour:
   blockPrefab: {fileID: 7358582990706266191, guid: e9702df1a1db90646bb3ff4f560c46b3, type: 3}
   DetectHand: {fileID: 1921620095}
   handHoldPoint: {fileID: 1666317362}
+  handType: right
 --- !u!1 &1667217043
 GameObject:
   m_ObjectHideFlags: 0

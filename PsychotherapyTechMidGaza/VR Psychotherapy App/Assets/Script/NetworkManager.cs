@@ -8,6 +8,7 @@ using static JsonClasses;
 public class NetworkManager : MonoBehaviour
 {
     public SocketIOComponent SocketIO;
+    public static NetworkManager Instance;
     public Transform camTransform;
     public Transform adminCamera;
     public GameObject playerBody;
@@ -18,14 +19,21 @@ public class NetworkManager : MonoBehaviour
     public Transform adminRightHand;
     public bool canSync;
 
+    public GameObject adminRose;
+    public GameObject adminCandle;
+
     public PandolManager pandolManager;
     public CardsControl cardsControl;
     public CarManager carManager;
     public VoiceToggle voiceToggle;
 
-
     private void Start()
     {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+
         SocketIO.On("cameraUpdate", (response) =>
         {
             //Debug.Log("Received Camera Update: " + response);
@@ -37,6 +45,12 @@ public class NetworkManager : MonoBehaviour
         {
             HandData handData = JsonUtility.FromJson<HandData>(response.data.ToString());
             ApplyHandData(handData);
+        });
+
+        SocketIO.On("handObjectToggle", (response) =>
+        {
+            HandObjectData data = JsonUtility.FromJson<HandObjectData>(response.data.ToString());
+            ApplyHandObject(data);
         });
 
         SocketIO.On("appSelect", (response) =>
@@ -176,6 +190,19 @@ public class NetworkManager : MonoBehaviour
             SocketIO.Emit("handUpdate", new JSONObject(json));
         }
     }
+    public void SendHandObjectState(string hand, bool isActive)
+    {
+        if (!canSync) return;
+
+        HandObjectData obj = new()
+        {
+            hand = hand,
+            isActive = isActive
+        };
+
+        string json = JsonUtility.ToJson(obj);
+        SocketIO.Emit("handObjectToggle", new JSONObject(json));
+    }
 
     private void ApplyCameraData(CameraData camData)
     {
@@ -185,8 +212,8 @@ public class NetworkManager : MonoBehaviour
     }
     private void ApplyHandData(HandData data)
     {
-        adminLeftHand.gameObject.SetActive(true);
-        adminRightHand.gameObject.SetActive(true);
+        //adminLeftHand.gameObject.SetActive(true);
+        //adminRightHand.gameObject.SetActive(true);
 
         adminLeftHand.transform.position = new Vector3(data.leftPosition[0], data.leftPosition[1], data.leftPosition[2]);
         adminLeftHand.eulerAngles = new Vector3(data.leftRotation[0], data.leftRotation[1], data.leftRotation[2]);
@@ -194,7 +221,17 @@ public class NetworkManager : MonoBehaviour
         adminRightHand.transform.position = new Vector3(data.rightPosition[0], data.rightPosition[1], data.rightPosition[2]);
         adminRightHand.eulerAngles = new Vector3(data.rightRotation[0], data.rightRotation[1], data.rightRotation[2]);
     }
-
+    private void ApplyHandObject(HandObjectData data)
+    {
+        if (data.hand == "right" && adminRose != null)
+        {
+            adminRose.SetActive(data.isActive);
+        }
+        else if (data.hand == "left" && adminCandle != null)
+        {
+            adminCandle.SetActive(data.isActive);
+        }
+    }
 
     public void SendApplication(string appID)
     {
