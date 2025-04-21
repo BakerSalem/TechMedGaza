@@ -27,6 +27,8 @@ public class NetworkManager : MonoBehaviour
     public CarManager carManager;
     public VoiceToggle voiceToggle;
 
+    private string currentApp = "";
+
     private void Start()
     {
         if (Instance == null)
@@ -55,24 +57,34 @@ public class NetworkManager : MonoBehaviour
 
         SocketIO.On("appSelect", (response) =>
         {
-
             Debug.Log("Application Selected Update: " + response);
             AppJson appData = JsonUtility.FromJson<AppJson>(response.data.ToString());
+
+            currentApp = appData.ID;
+
+            if (currentApp == "Five Senses")
+            {
+                if (adminRose != null) adminRose.SetActive(true);
+                if (adminCandle != null) adminCandle.SetActive(true);
+            }
+            else
+            {
+                if (adminRose != null) adminRose.SetActive(false);
+                if (adminCandle != null) adminCandle.SetActive(false);
+            }
 
             foreach (Transform app in applications)
             {
                 if (app.gameObject.name == appData.ID)
                 {
                     app.parent.gameObject.SetActive(true);
-                    playerBody.transform.position = app.position;
-                    playerBody.transform.rotation = app.rotation;
+                    playerBody.transform.SetPositionAndRotation(app.position, app.rotation);
                 }
                 else
                 {
                     app.parent.gameObject.SetActive(false);
                 }
             }
-
             canSync = true;
         });
 
@@ -120,6 +132,7 @@ public class NetworkManager : MonoBehaviour
             Debug.Log("Received Car Stop ");
             carManager.StopAnimation();
         });
+
         SocketIO.On("carRestart", _ =>
         {
             Debug.Log("Received Car Restart ");
@@ -203,36 +216,6 @@ public class NetworkManager : MonoBehaviour
         string json = JsonUtility.ToJson(obj);
         SocketIO.Emit("handObjectToggle", new JSONObject(json));
     }
-
-    private void ApplyCameraData(CameraData camData)
-    {
-        adminCamera.gameObject.SetActive(true);
-        adminCamera.transform.position = new Vector3(camData.position[0], camData.position[1], camData.position[2]);
-        adminCamera.transform.eulerAngles = new Vector3(camData.rotation[0], camData.rotation[1], camData.rotation[2]); ;
-    }
-    private void ApplyHandData(HandData data)
-    {
-        //adminLeftHand.gameObject.SetActive(true);
-        //adminRightHand.gameObject.SetActive(true);
-
-        adminLeftHand.transform.position = new Vector3(data.leftPosition[0], data.leftPosition[1], data.leftPosition[2]);
-        adminLeftHand.eulerAngles = new Vector3(data.leftRotation[0], data.leftRotation[1], data.leftRotation[2]);
-
-        adminRightHand.transform.position = new Vector3(data.rightPosition[0], data.rightPosition[1], data.rightPosition[2]);
-        adminRightHand.eulerAngles = new Vector3(data.rightRotation[0], data.rightRotation[1], data.rightRotation[2]);
-    }
-    private void ApplyHandObject(HandObjectData data)
-    {
-        if (data.hand == "right" && adminRose != null)
-        {
-            adminRose.SetActive(data.isActive);
-        }
-        else if (data.hand == "left" && adminCandle != null)
-        {
-            adminCandle.SetActive(data.isActive);
-        }
-    }
-
     public void SendApplication(string appID)
     {
 
@@ -254,6 +237,33 @@ public class NetworkManager : MonoBehaviour
 
         SocketIO.Emit("appSelect", new JSONObject(json));
     }
+
+    private void ApplyCameraData(CameraData camData)
+    {
+        adminCamera.gameObject.SetActive(true);
+        adminCamera.transform.position = new Vector3(camData.position[0], camData.position[1], camData.position[2]);
+        adminCamera.transform.eulerAngles = new Vector3(camData.rotation[0], camData.rotation[1], camData.rotation[2]); ;
+    }
+    private void ApplyHandData(HandData data)
+    {
+        adminLeftHand.transform.position = new Vector3(data.leftPosition[0], data.leftPosition[1], data.leftPosition[2]);
+        adminLeftHand.eulerAngles = new Vector3(data.leftRotation[0], data.leftRotation[1], data.leftRotation[2]);
+
+        adminRightHand.transform.position = new Vector3(data.rightPosition[0], data.rightPosition[1], data.rightPosition[2]);
+        adminRightHand.eulerAngles = new Vector3(data.rightRotation[0], data.rightRotation[1], data.rightRotation[2]);
+    }
+    private void ApplyHandObject(HandObjectData data)
+    {
+        if (data.hand == "right" && adminRose != null)
+        {
+            adminRose.SetActive(data.isActive);
+        }
+        else if (data.hand == "left" && adminCandle != null)
+        {
+            adminCandle.SetActive(data.isActive);
+        }
+    }
+
     public void FlipCardSend(string id)
     {
         CardJson cardData = new CardJson { ID = id };
@@ -276,17 +286,14 @@ public class NetworkManager : MonoBehaviour
     {
         SocketIO.Emit("startPandol");
     }
-
     public void PandolStopSend()
     {
         SocketIO.Emit("stopPandol");
     }
-
     public void CarStartSend()
     {
         SocketIO.Emit("carStart");
     }
-
     public void CarStopSend()
     {
         SocketIO.Emit("carStop");
