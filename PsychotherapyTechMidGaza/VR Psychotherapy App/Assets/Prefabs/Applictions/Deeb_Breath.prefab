@@ -5379,11 +5379,11 @@ MonoBehaviour:
   adminControll: {fileID: 0}
   animator: {fileID: 6651726698225822618}
   speedPanel: {fileID: 0}
-  celebration: {fileID: 8460223123149128828}
   carJson:
     ID: 
     speed: 0
   restPos: {fileID: 6701802992716440601}
+  celebrationEffect: {fileID: 8460223123149128828}
 --- !u!1 &1239334074810361125
 GameObject:
   m_ObjectHideFlags: 0
