@@ -30,8 +30,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4232350512884268535}
+  m_Children: []
   m_Father: {fileID: 7968983558573305147}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6759390139403365474
@@ -651,56 +650,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1312773498346843835
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4259695552891526818}
-  - component: {fileID: 8410435734460318182}
-  m_Layer: 0
-  m_Name: PokeLimiter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4259695552891526818
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1312773498346843835}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.071373135, y: -0.9735441, z: -0.21581864, w: -0.023239791}
-  m_LocalPosition: {x: -0.30237648, y: -0.6062994, z: 0.44442594}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3907291404036263414}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8410435734460318182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1312773498346843835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b023183069df224080314a560e6e1ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blockId: 27673ac1-cdb0-443f-a07d-6ff1d34daeca
-  instanceId: 3c6226e3-fb88-4681-8891-598e34bb8452
-  version: 1
-  installationRoutineCheckpoint:
-    _installationRoutineId: 
-    _installationVariants: []
 --- !u!1 &1569138788349329364
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,56 +810,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &2238697210650074436
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8286089357259129684}
-  - component: {fileID: 8650490149210593805}
-  m_Layer: 0
-  m_Name: PokeLimiter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8286089357259129684
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2238697210650074436}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.071373135, y: -0.9735441, z: -0.21581864, w: -0.023239791}
-  m_LocalPosition: {x: 0.21846598, y: -0.6811962, z: 0.4444263}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 9037993681274905961}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8650490149210593805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2238697210650074436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b023183069df224080314a560e6e1ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blockId: 27673ac1-cdb0-443f-a07d-6ff1d34daeca
-  instanceId: a5d45131-6fec-420f-86c3-1696605e79f6
-  version: 1
-  installationRoutineCheckpoint:
-    _installationRoutineId: 
-    _installationVariants: []
 --- !u!1 &2350083318203818322
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,56 +842,6 @@ Transform:
   - {fileID: 253437066260792502}
   m_Father: {fileID: 4860989756867138439}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2456994540235460117
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 121381330693341787}
-  - component: {fileID: 4599989731664620547}
-  m_Layer: 0
-  m_Name: PokeLimiter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &121381330693341787
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2456994540235460117}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.071373135, y: -0.9735441, z: -0.21581864, w: -0.023239791}
-  m_LocalPosition: {x: -0.21923172, y: -0.61825556, z: 0.44442594}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8646261819818678166}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4599989731664620547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2456994540235460117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b023183069df224080314a560e6e1ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blockId: 27673ac1-cdb0-443f-a07d-6ff1d34daeca
-  instanceId: b6822a90-9d2c-4458-bb2f-6c763bc48d71
-  version: 1
-  installationRoutineCheckpoint:
-    _installationRoutineId: 
-    _installationVariants: []
 --- !u!1 &2639382376496581182
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,8 +992,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7600873328034087709}
+  m_Children: []
   m_Father: {fileID: 8854261202171833239}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &960797597323279141
@@ -1216,8 +1064,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 121381330693341787}
+  m_Children: []
   m_Father: {fileID: 7574238619642878876}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8394665067413420383
@@ -1535,8 +1382,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8286089357259129684}
+  m_Children: []
   m_Father: {fileID: 2356914880111720382}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2655414205245831886
@@ -1552,7 +1398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f61a01e5-61c7-4589-bd2d-107bccae8f02
-  instanceId: b78fe684-a248-4756-99fc-ff5e086b14cb
+  instanceId: 3f0f056f-0340-408d-a9d6-cfe7a8c21833
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -1750,56 +1596,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &4363054136893397098
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4232350512884268535}
-  - component: {fileID: 5532981766735892321}
-  m_Layer: 0
-  m_Name: PokeLimiter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4232350512884268535
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4363054136893397098}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.11767907, y: -0.007916392, z: 0.0009381511, w: 0.9930197}
-  m_LocalPosition: {x: 0.51900005, y: -0.5378293, z: -0.58756727}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5633692115720538309}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5532981766735892321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4363054136893397098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b023183069df224080314a560e6e1ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blockId: 27673ac1-cdb0-443f-a07d-6ff1d34daeca
-  instanceId: 18eade76-e9d3-4789-9300-7ed666286bb7
-  version: 1
-  installationRoutineCheckpoint:
-    _installationRoutineId: 
-    _installationVariants: []
 --- !u!1 &4463994421332893824
 GameObject:
   m_ObjectHideFlags: 0
@@ -1886,56 +1682,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &4752002749518197449
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7600873328034087709}
-  - component: {fileID: 1845178253730003544}
-  m_Layer: 0
-  m_Name: PokeLimiter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7600873328034087709
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4752002749518197449}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.071373135, y: -0.9735441, z: -0.21581864, w: -0.023239791}
-  m_LocalPosition: {x: 0.14304186, y: -0.67035025, z: 0.44442606}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4440337227465507245}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1845178253730003544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4752002749518197449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b023183069df224080314a560e6e1ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blockId: 27673ac1-cdb0-443f-a07d-6ff1d34daeca
-  instanceId: 4c25d6b3-58a4-476e-a1fb-b7a663812d9f
-  version: 1
-  installationRoutineCheckpoint:
-    _installationRoutineId: 
-    _installationVariants: []
 --- !u!1 &4896752857034770300
 GameObject:
   m_ObjectHideFlags: 0
@@ -2076,8 +1822,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1983756240534260570}
+  m_Children: []
   m_Father: {fileID: 7493873289519776823}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4863152284730961907
@@ -2149,8 +1894,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4259695552891526818}
+  m_Children: []
   m_Father: {fileID: 1623943412174167563}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5574452964155646192
@@ -2202,12 +1946,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3449173170803339397}
   m_Layer: 0
-  m_Name: DrawingRoom
+  m_Name: Draw Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3449173170803339397
 Transform:
   m_ObjectHideFlags: 0
@@ -2554,8 +2298,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7130046521536707718}
+  m_Children: []
   m_Father: {fileID: 5448249278661191245}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6744688196098342070
@@ -2878,56 +2621,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &6708791525744491988
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 363088042820736359}
-  - component: {fileID: 4090228664290683805}
-  m_Layer: 0
-  m_Name: PokeLimiter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &363088042820736359
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6708791525744491988}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.071373135, y: -0.9735441, z: -0.21581864, w: -0.023239791}
-  m_LocalPosition: {x: -0.07273859, y: -0.6393212, z: 0.44442594}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5401631521458951946}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4090228664290683805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6708791525744491988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b023183069df224080314a560e6e1ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blockId: 27673ac1-cdb0-443f-a07d-6ff1d34daeca
-  instanceId: 8d41a6a8-735c-4df9-9d28-75cdff4fe70f
-  version: 1
-  installationRoutineCheckpoint:
-    _installationRoutineId: 
-    _installationVariants: []
 --- !u!1 &7025547209858134177
 GameObject:
   m_ObjectHideFlags: 0
@@ -3044,8 +2737,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4265498381135023473}
+  m_Children: []
   m_Father: {fileID: 9212032977124318651}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2126783075813127846
@@ -3173,56 +2865,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &7665960017725021847
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1307757575711723660}
-  - component: {fileID: 7327531708230453507}
-  m_Layer: 0
-  m_Name: PokeLimiter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1307757575711723660
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7665960017725021847}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.071373135, y: -0.9735441, z: -0.21581864, w: -0.023239791}
-  m_LocalPosition: {x: -0.14598516, y: -0.6287883, z: 0.44442588}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2581625047160863649}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7327531708230453507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7665960017725021847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b023183069df224080314a560e6e1ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blockId: 27673ac1-cdb0-443f-a07d-6ff1d34daeca
-  instanceId: 2bfbb20e-1f5d-4579-a747-c91d54083221
-  version: 1
-  installationRoutineCheckpoint:
-    _installationRoutineId: 
-    _installationVariants: []
 --- !u!1 &7772699744842724657
 GameObject:
   m_ObjectHideFlags: 0
@@ -3413,8 +3055,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1307757575711723660}
+  m_Children: []
   m_Father: {fileID: 5054859696203085019}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &575649259785897764
@@ -3466,7 +3107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 444650861010972595}
   m_Layer: 0
-  m_Name: Drawing
+  m_Name: Draw Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3480,13 +3121,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8019305776899099026}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.78, y: 0.268, z: 0.67}
+  m_LocalRotation: {x: -0, y: -0.7127213, z: -0, w: 0.7014474}
+  m_LocalPosition: {x: -1.995, y: 0.05, z: 0.619}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3449173170803339397}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90.914, z: 0}
 --- !u!1 &8187429030880714562
 GameObject:
   m_ObjectHideFlags: 0
@@ -3839,56 +3480,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &8401833954786391712
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1983756240534260570}
-  - component: {fileID: 7556569696057524503}
-  m_Layer: 0
-  m_Name: PokeLimiter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1983756240534260570
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8401833954786391712}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.071373135, y: -0.9735441, z: -0.21581864, w: -0.023239791}
-  m_LocalPosition: {x: 0.0014977828, y: -0.64999634, z: 0.44442585}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4081348490513040769}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7556569696057524503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8401833954786391712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b023183069df224080314a560e6e1ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blockId: 27673ac1-cdb0-443f-a07d-6ff1d34daeca
-  instanceId: 57f754f2-478f-424a-82a8-bd1c30d914a8
-  version: 1
-  installationRoutineCheckpoint:
-    _installationRoutineId: 
-    _installationVariants: []
 --- !u!1 &8485771556733703737
 GameObject:
   m_ObjectHideFlags: 0
@@ -3919,8 +3510,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 363088042820736359}
+  m_Children: []
   m_Father: {fileID: 4619515019385651916}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &366277425550053861
@@ -3962,56 +3552,6 @@ MonoBehaviour:
   _radius: 0.005
   _touchReleaseThreshold: 0.002
   _equalDistanceThreshold: 0.001
---- !u!1 &8562592778108112059
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4265498381135023473}
-  - component: {fileID: 4614401173060512133}
-  m_Layer: 0
-  m_Name: PokeLimiter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4265498381135023473
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8562592778108112059}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.071373135, y: -0.9735441, z: -0.21581864, w: -0.023239791}
-  m_LocalPosition: {x: 0.06880543, y: -0.6596751, z: 0.44442606}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3630418764276836273}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4614401173060512133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8562592778108112059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b023183069df224080314a560e6e1ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blockId: 27673ac1-cdb0-443f-a07d-6ff1d34daeca
-  instanceId: 92371e3f-eb93-4be1-aebd-41fee34d65c2
-  version: 1
-  installationRoutineCheckpoint:
-    _installationRoutineId: 
-    _installationVariants: []
 --- !u!1 &8622576680751346392
 GameObject:
   m_ObjectHideFlags: 0
@@ -4163,56 +3703,6 @@ Transform:
   - {fileID: 668412588197223199}
   m_Father: {fileID: 6859916643046409670}
   m_LocalEulerAnglesHint: {x: 180, y: -180, z: 0}
---- !u!1 &9033746497425372079
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7130046521536707718}
-  - component: {fileID: 7773620170436480515}
-  m_Layer: 0
-  m_Name: PokeLimiter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7130046521536707718
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9033746497425372079}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.071373135, y: -0.9735441, z: -0.21581864, w: -0.023239791}
-  m_LocalPosition: {x: -0.3845314, y: -0.5944856, z: 0.44442597}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4183162071271832185}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7773620170436480515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9033746497425372079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b023183069df224080314a560e6e1ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blockId: 27673ac1-cdb0-443f-a07d-6ff1d34daeca
-  instanceId: d98eccf3-a895-43ba-8fd4-b1123e18d9a2
-  version: 1
-  installationRoutineCheckpoint:
-    _installationRoutineId: 
-    _installationVariants: []
 --- !u!1 &9103500175127449829
 GameObject:
   m_ObjectHideFlags: 0
@@ -4369,8 +3859,31 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8499225703927201122, guid: 23b2206cb1fa9e947b9c29ec78ff349e, type: 3}
       insertIndex: 0
       addedObject: {fileID: 3630418764276836273}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1308941933299175680, guid: 23b2206cb1fa9e947b9c29ec78ff349e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7512191933699631591}
   m_SourcePrefab: {fileID: 100100000, guid: 23b2206cb1fa9e947b9c29ec78ff349e, type: 3}
+--- !u!1 &1733512368550834649 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1308941933299175680, guid: 23b2206cb1fa9e947b9c29ec78ff349e, type: 3}
+  m_PrefabInstance: {fileID: 730963646693171417}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7512191933699631591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733512368550834649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac394b029d2390b47a3099c392669b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pokeInteractor: {fileID: 5210509038845909834}
+  surfaceOffset: 0.07
+  releaseThreshold: 0.07
 --- !u!4 &5167578166001305098 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5589542623947548371, guid: 23b2206cb1fa9e947b9c29ec78ff349e, type: 3}
@@ -4443,13 +3956,103 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6260776911463775084, guid: c951727e98cbb2f4d9a739ffdbea815a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4860989756867138439}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3384767487031967107, guid: c951727e98cbb2f4d9a739ffdbea815a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4000857072132259901}
+    - targetCorrespondingSourceObject: {fileID: 1918362510754913283, guid: c951727e98cbb2f4d9a739ffdbea815a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4120621105938331577}
+    - targetCorrespondingSourceObject: {fileID: 5126860007443464799, guid: c951727e98cbb2f4d9a739ffdbea815a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4702133244699912504}
   m_SourcePrefab: {fileID: 100100000, guid: c951727e98cbb2f4d9a739ffdbea815a, type: 3}
+--- !u!1 &1009688769168394264 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1918362510754913283, guid: c951727e98cbb2f4d9a739ffdbea815a, type: 3}
+  m_PrefabInstance: {fileID: 1485139063735505947}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &4120621105938331577
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009688769168394264}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -9090457421139725384, guid: 58941225a51d0e647ab89919a1df2888, type: 3}
+--- !u!1 &4207868403292449176 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3384767487031967107, guid: c951727e98cbb2f4d9a739ffdbea815a, type: 3}
+  m_PrefabInstance: {fileID: 1485139063735505947}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &4000857072132259901
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4207868403292449176}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8616276468678558677, guid: 58941225a51d0e647ab89919a1df2888, type: 3}
 --- !u!4 &4791541322425118583 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6260776911463775084, guid: c951727e98cbb2f4d9a739ffdbea815a, type: 3}
   m_PrefabInstance: {fileID: 1485139063735505947}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6033136984406480452 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5126860007443464799, guid: c951727e98cbb2f4d9a739ffdbea815a, type: 3}
+  m_PrefabInstance: {fileID: 1485139063735505947}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &4702133244699912504
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6033136984406480452}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -9090457421139725384, guid: 58941225a51d0e647ab89919a1df2888, type: 3}
 --- !u!1001 &1870270187909627395
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4528,6 +4131,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2267096007548384402, guid: 0cfdc702523c0554c976a9f24d8c4063, type: 3}
       insertIndex: 2
       addedObject: {fileID: 5228706644670249028}
+    - targetCorrespondingSourceObject: {fileID: 2267096007548384402, guid: 0cfdc702523c0554c976a9f24d8c4063, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5460790152331281054}
   m_SourcePrefab: {fileID: 100100000, guid: 0cfdc702523c0554c976a9f24d8c4063, type: 3}
 --- !u!1 &469182626880260753 stripped
 GameObject:
@@ -4554,6 +4160,21 @@ MonoBehaviour:
     _installationVariants:
     - _memberName: mode
       _value: '{"value__":0}'
+--- !u!114 &5460790152331281054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469182626880260753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac394b029d2390b47a3099c392669b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pokeInteractor: {fileID: 429504846258287451}
+  surfaceOffset: 0.07
+  releaseThreshold: 0.07
 --- !u!4 &867338586201181392 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1584685473938928339, guid: 0cfdc702523c0554c976a9f24d8c4063, type: 3}
@@ -4648,8 +4269,31 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4727168232225877401, guid: 7254bb2ad8da5d949a9aa0936a438c43, type: 3}
       insertIndex: 0
       addedObject: {fileID: 5633692115720538309}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9113109380130068565, guid: 7254bb2ad8da5d949a9aa0936a438c43, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3031310500746496403}
   m_SourcePrefab: {fileID: 100100000, guid: 7254bb2ad8da5d949a9aa0936a438c43, type: 3}
+--- !u!1 &5869745675516500215 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9113109380130068565, guid: 7254bb2ad8da5d949a9aa0936a438c43, type: 3}
+  m_PrefabInstance: {fileID: 3390579559167754402}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3031310500746496403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5869745675516500215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac394b029d2390b47a3099c392669b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pokeInteractor: {fileID: 7229575938577045100}
+  surfaceOffset: 0.035
+  releaseThreshold: 0.035
 --- !u!4 &7920769131235494387 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4819409784124918097, guid: 7254bb2ad8da5d949a9aa0936a438c43, type: 3}
@@ -4726,8 +4370,31 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9144057230750668358, guid: f8a8f5a84d3f7cc4290d466fa8ffc18b, type: 3}
       insertIndex: 0
       addedObject: {fileID: 4183162071271832185}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4325438631123248165, guid: f8a8f5a84d3f7cc4290d466fa8ffc18b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3736191736042756664}
   m_SourcePrefab: {fileID: 100100000, guid: f8a8f5a84d3f7cc4290d466fa8ffc18b, type: 3}
+--- !u!1 &683753039928415278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4325438631123248165, guid: f8a8f5a84d3f7cc4290d466fa8ffc18b, type: 3}
+  m_PrefabInstance: {fileID: 3853434491563192331}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3736191736042756664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683753039928415278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac394b029d2390b47a3099c392669b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pokeInteractor: {fileID: 2878021534920980323}
+  surfaceOffset: 0.07
+  releaseThreshold: 0.07
 --- !u!4 &5448249278661191245 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9144057230750668358, guid: f8a8f5a84d3f7cc4290d466fa8ffc18b, type: 3}
@@ -4805,166 +4472,35 @@ PrefabInstance:
       insertIndex: 0
       addedObject: {fileID: 2581625047160863649}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1978195958318067596, guid: eae8f997b02d1a64187d86b1528390ee, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 9211100614906774575, guid: eae8f997b02d1a64187d86b1528390ee, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7503434378252601143}
+      addedObject: {fileID: 5611548828240326947}
   m_SourcePrefab: {fileID: 100100000, guid: eae8f997b02d1a64187d86b1528390ee, type: 3}
---- !u!1 &2441437156959336089 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1978195958318067596, guid: eae8f997b02d1a64187d86b1528390ee, type: 3}
-  m_PrefabInstance: {fileID: 4220520010305067285}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7503434378252601143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2441437156959336089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 317e663e2bb60ea408fe22b908b59295, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interactorFilters: []
-  _maxInteractors: -1
-  _maxSelectingInteractors: -1
-  _data: {fileID: 0}
-  _pointableElement: {fileID: 0}
-  _surfacePatch: {fileID: 5858716296026187781}
-  _enterHoverNormal: 0.15
-  _enterHoverTangent: 0
-  _exitHoverNormal: 0.2
-  _exitHoverTangent: 0
-  _cancelSelectNormal: 0.3
-  _cancelSelectTangent: 0.03
-  _minThresholds:
-    Enabled: 0
-    MinNormal: 0.01
-  _dragThresholds:
-    Enabled: 1
-    DragNormal: 0.01
-    DragTangent: 0.01
-    DragEaseCurve:
-      _animationCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      _animationLength: 0.05
-  _positionPinning:
-    Enabled: 0
-    MaxPinDistance: 0.075
-    PinningEaseCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0.2
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    ResyncCurve:
-      _animationCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      _animationLength: 0.2
-  _recoilAssist:
-    Enabled: 0
-    UseDynamicDecay: 0
-    DynamicDecayCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 50
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.9
-        value: 0.5
-        inSlope: -47
-        outSlope: -47
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    UseVelocityExpansion: 0
-    VelocityExpansionMinSpeed: 0.4
-    VelocityExpansionMaxSpeed: 1.4
-    VelocityExpansionDistance: 0.055
-    VelocityExpansionDecayRate: 0.125
-    ExitDistance: 0.02
-    ReEnterDistance: 0.02
-  _closeDistanceThreshold: 0.001
-  _tiebreakerScore: 0
 --- !u!4 &4140988920064294614 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 280898751330772931, guid: eae8f997b02d1a64187d86b1528390ee, type: 3}
   m_PrefabInstance: {fileID: 4220520010305067285}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4991725213387316538 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9211100614906774575, guid: eae8f997b02d1a64187d86b1528390ee, type: 3}
+  m_PrefabInstance: {fileID: 4220520010305067285}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5611548828240326947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4991725213387316538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac394b029d2390b47a3099c392669b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pokeInteractor: {fileID: 1233174170180823022}
+  surfaceOffset: 0.07
+  releaseThreshold: 0.07
 --- !u!4 &5054859696203085019 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8985864924495801806, guid: eae8f997b02d1a64187d86b1528390ee, type: 3}
@@ -5040,13 +4576,36 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4743486159813456657, guid: 7db31a304d06b81409a63e20462ddf7f, type: 3}
       insertIndex: 0
       addedObject: {fileID: 4440337227465507245}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7463007358861993400, guid: 7db31a304d06b81409a63e20462ddf7f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2818845743869766821}
   m_SourcePrefab: {fileID: 100100000, guid: 7db31a304d06b81409a63e20462ddf7f, type: 3}
 --- !u!4 &662691689706440224 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3604782637352115878, guid: 7db31a304d06b81409a63e20462ddf7f, type: 3}
   m_PrefabInstance: {fileID: 4266202014650734726}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6675871249392500030 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7463007358861993400, guid: 7db31a304d06b81409a63e20462ddf7f, type: 3}
+  m_PrefabInstance: {fileID: 4266202014650734726}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2818845743869766821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6675871249392500030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac394b029d2390b47a3099c392669b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pokeInteractor: {fileID: 4981705165840951380}
+  surfaceOffset: 0.07
+  releaseThreshold: 0.07
 --- !u!4 &8854261202171833239 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4743486159813456657, guid: 7db31a304d06b81409a63e20462ddf7f, type: 3}
@@ -5118,8 +4677,31 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8972709266258689346, guid: 38a9567a934b47149910f87c06183e7f, type: 3}
       insertIndex: 0
       addedObject: {fileID: 5401631521458951946}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3351758728812580676, guid: 38a9567a934b47149910f87c06183e7f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2326615656278503139}
   m_SourcePrefab: {fileID: 100100000, guid: 38a9567a934b47149910f87c06183e7f, type: 3}
+--- !u!1 &1305323886548906186 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3351758728812580676, guid: 38a9567a934b47149910f87c06183e7f, type: 3}
+  m_PrefabInstance: {fileID: 4368113297516674958}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2326615656278503139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305323886548906186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac394b029d2390b47a3099c392669b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pokeInteractor: {fileID: 5093890815425562670}
+  surfaceOffset: 0.07
+  releaseThreshold: 0.07
 --- !u!4 &2102067846440007336 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2428192776978401574, guid: 38a9567a934b47149910f87c06183e7f, type: 3}
@@ -5200,8 +4782,31 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 289321123918289569, guid: 3a0b1f3de12b5e34b8187b047759c3e2, type: 3}
       insertIndex: 0
       addedObject: {fileID: 4081348490513040769}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3801080799500545248, guid: 3a0b1f3de12b5e34b8187b047759c3e2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9196198265399435595}
   m_SourcePrefab: {fileID: 100100000, guid: 3a0b1f3de12b5e34b8187b047759c3e2, type: 3}
+--- !u!1 &6285988050635747958 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3801080799500545248, guid: 3a0b1f3de12b5e34b8187b047759c3e2, type: 3}
+  m_PrefabInstance: {fileID: 7204763293313392278}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9196198265399435595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6285988050635747958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac394b029d2390b47a3099c392669b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pokeInteractor: {fileID: 209279788522633291}
+  surfaceOffset: 0.07
+  releaseThreshold: 0.07
 --- !u!4 &6476171418682952434 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4189347784498173028, guid: 3a0b1f3de12b5e34b8187b047759c3e2, type: 3}
@@ -5278,13 +4883,36 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8863917780668674788, guid: af58d378c1c94b74b84a84f5b01b0fb8, type: 3}
       insertIndex: 0
       addedObject: {fileID: 3907291404036263414}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6374999549498246502, guid: af58d378c1c94b74b84a84f5b01b0fb8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5004278260450687540}
   m_SourcePrefab: {fileID: 100100000, guid: af58d378c1c94b74b84a84f5b01b0fb8, type: 3}
 --- !u!4 &1623943412174167563 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8863917780668674788, guid: af58d378c1c94b74b84a84f5b01b0fb8, type: 3}
   m_PrefabInstance: {fileID: 7893562955973553391}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3887483887187798409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6374999549498246502, guid: af58d378c1c94b74b84a84f5b01b0fb8, type: 3}
+  m_PrefabInstance: {fileID: 7893562955973553391}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5004278260450687540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887483887187798409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac394b029d2390b47a3099c392669b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pokeInteractor: {fileID: 6069997751565449927}
+  surfaceOffset: 0.07
+  releaseThreshold: 0.07
 --- !u!4 &8052575206223297567 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 165489503345234160, guid: af58d378c1c94b74b84a84f5b01b0fb8, type: 3}
@@ -5356,8 +4984,31 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 504393729728396755, guid: 0ffe77cd8f182aa44ad68481ba8d7b81, type: 3}
       insertIndex: 0
       addedObject: {fileID: 8646261819818678166}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5295816986398038663, guid: 0ffe77cd8f182aa44ad68481ba8d7b81, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9026659457506061070}
   m_SourcePrefab: {fileID: 100100000, guid: 0ffe77cd8f182aa44ad68481ba8d7b81, type: 3}
+--- !u!1 &2782217373527243976 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5295816986398038663, guid: 0ffe77cd8f182aa44ad68481ba8d7b81, type: 3}
+  m_PrefabInstance: {fileID: 8062268551915824719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9026659457506061070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2782217373527243976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac394b029d2390b47a3099c392669b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pokeInteractor: {fileID: 9071344556078675906}
+  surfaceOffset: 0.07
+  releaseThreshold: 0.07
 --- !u!4 &4269233013716655911 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6115239883784943976, guid: 0ffe77cd8f182aa44ad68481ba8d7b81, type: 3}
