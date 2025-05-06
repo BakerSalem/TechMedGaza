@@ -158,6 +158,38 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &533474766225183684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7400829924254191967}
+  m_Layer: 0
+  m_Name: Voices
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7400829924254191967
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533474766225183684}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.4921798, z: -0, w: 0.87049353}
+  m_LocalPosition: {x: 45.68207, y: 2.1658819, z: -124.3374}
+  m_LocalScale: {x: 0.12865998, y: 0.17545, z: 0.12865998}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8082055817923233729}
+  m_Father: {fileID: 3449173170803339397}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &730923737660286055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1978,6 +2010,7 @@ Transform:
   - {fileID: 7574238619642878876}
   - {fileID: 1623943412174167563}
   - {fileID: 5448249278661191245}
+  - {fileID: 7400829924254191967}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &5885254352552423366
@@ -2865,6 +2898,135 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &7771294784700707682
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8082055817923233729}
+  - component: {fileID: 13931595308824753}
+  m_Layer: 0
+  m_Name: Sound hook
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8082055817923233729
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7771294784700707682}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.2675082, z: -0, w: 0.96355563}
+  m_LocalPosition: {x: -48.747787, y: 4.6680284, z: -16.049845}
+  m_LocalScale: {x: 8.549501, y: 8.549501, z: 8.549501}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7400829924254191967}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &13931595308824753
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7771294784700707682}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 9255bade4d5082346bf9907281ad4dc4, type: 3}
+  m_Resource: {fileID: 8300000, guid: 9255bade4d5082346bf9907281ad4dc4, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.055
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 184
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 5
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &7772699744842724657
 GameObject:
   m_ObjectHideFlags: 0
@@ -3638,6 +3800,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6859916643046409670}
+  - component: {fileID: 2033767747975884636}
   m_Layer: 0
   m_Name: Room
   m_TagString: Untagged
@@ -3669,6 +3832,19 @@ Transform:
   - {fileID: 8160738550229486397}
   m_Father: {fileID: 3449173170803339397}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2033767747975884636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8837728003156485777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183716d706fbe5c4ea3acbdd4c98878a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voiceAudio: {fileID: 533474766225183684}
 --- !u!1 &9008204177628798653
 GameObject:
   m_ObjectHideFlags: 0
@@ -3921,6 +4097,7 @@ MonoBehaviour:
   color: {r: 0.9433962, g: 0.57315767, b: 0.8733731, a: 1}
   sphereCollider: {fileID: 0}
   meshCollider: {fileID: 1281359381265833352}
+  drawingSound: {fileID: 8300000, guid: 166d993656d4e6847b4d9eae4a42762f, type: 3}
 --- !u!4 &5167578166001305098 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5589542623947548371, guid: 23b2206cb1fa9e947b9c29ec78ff349e, type: 3}
@@ -4264,6 +4441,7 @@ MonoBehaviour:
   color: {r: 1, g: 1, b: 1, a: 1}
   sphereCollider: {fileID: 0}
   meshCollider: {fileID: 1096151225153991225}
+  drawingSound: {fileID: 8300000, guid: 166d993656d4e6847b4d9eae4a42762f, type: 3}
 --- !u!1001 &3390579559167754402
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4276,6 +4454,10 @@ PrefabInstance:
       propertyPath: _pinchGrabRules._unselectMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3398290124185091489, guid: 7254bb2ad8da5d949a9aa0936a438c43, type: 3}
+      propertyPath: eraserSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3d60186a93214a04eb38eca77cab05d7, type: 3}
     - target: {fileID: 4060449271818642643, guid: 7254bb2ad8da5d949a9aa0936a438c43, type: 3}
       propertyPath: m_Name
       value: Black
@@ -4501,6 +4683,7 @@ MonoBehaviour:
   color: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
   sphereCollider: {fileID: 0}
   meshCollider: {fileID: 6605475320802573891}
+  drawingSound: {fileID: 8300000, guid: 166d993656d4e6847b4d9eae4a42762f, type: 3}
 --- !u!4 &5448249278661191245 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9144057230750668358, guid: f8a8f5a84d3f7cc4290d466fa8ffc18b, type: 3}
@@ -4619,6 +4802,7 @@ MonoBehaviour:
   color: {r: 0.24144891, g: 0.7169812, b: 0, a: 1}
   sphereCollider: {fileID: 0}
   meshCollider: {fileID: 8416203856608721573}
+  drawingSound: {fileID: 8300000, guid: 166d993656d4e6847b4d9eae4a42762f, type: 3}
 --- !u!4 &4140988920064294614 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 280898751330772931, guid: eae8f997b02d1a64187d86b1528390ee, type: 3}
@@ -4706,6 +4890,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 8.183
       objectReference: {fileID: 0}
+    - target: {fileID: 5750063085323961215, guid: 7db31a304d06b81409a63e20462ddf7f, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d6339920aa3cbef4491a70d7a279368d, type: 2}
     - target: {fileID: 6922878374740521216, guid: 7db31a304d06b81409a63e20462ddf7f, type: 3}
       propertyPath: instanceId
       value: 22e40140-d342-44ea-bf02-56a541f5f015
@@ -4763,9 +4951,10 @@ MonoBehaviour:
   isSphere: 0
   useConstantSize: 1
   size: 0.01
-  color: {r: 0.754717, g: 0, b: 0, a: 1}
+  color: {r: 1, g: 0, b: 0, a: 1}
   sphereCollider: {fileID: 0}
   meshCollider: {fileID: 7555242449758274536}
+  drawingSound: {fileID: 8300000, guid: 166d993656d4e6847b4d9eae4a42762f, type: 3}
 --- !u!1 &6675871249392500030 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7463007358861993400, guid: 7db31a304d06b81409a63e20462ddf7f, type: 3}
@@ -4810,7 +4999,7 @@ PrefabInstance:
       objectReference: {fileID: 4619515019385651916}
     - target: {fileID: 3351758728812580676, guid: 38a9567a934b47149910f87c06183e7f, type: 3}
       propertyPath: m_Name
-      value: MarkerBlue
+      value: MarkerElectricBlue
       objectReference: {fileID: 0}
     - target: {fileID: 5772002121615910329, guid: 38a9567a934b47149910f87c06183e7f, type: 3}
       propertyPath: id
@@ -4899,6 +5088,7 @@ MonoBehaviour:
   color: {r: 0.4943396, g: 0.9693508, b: 1, a: 1}
   sphereCollider: {fileID: 0}
   meshCollider: {fileID: 3264198830057934407}
+  drawingSound: {fileID: 8300000, guid: 166d993656d4e6847b4d9eae4a42762f, type: 3}
 --- !u!1 &1305323886548906186 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3351758728812580676, guid: 38a9567a934b47149910f87c06183e7f, type: 3}
@@ -5076,6 +5266,7 @@ MonoBehaviour:
   color: {r: 1, g: 0.87678814, b: 0.2584905, a: 1}
   sphereCollider: {fileID: 0}
   meshCollider: {fileID: 5070335563805855084}
+  drawingSound: {fileID: 8300000, guid: 166d993656d4e6847b4d9eae4a42762f, type: 3}
 --- !u!1001 &7893562955973553391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5088,13 +5279,21 @@ PrefabInstance:
       propertyPath: instanceId
       value: f1719f11-0f90-49f8-8cf5-b10aee74284d
       objectReference: {fileID: 0}
+    - target: {fileID: 3822412314609127746, guid: af58d378c1c94b74b84a84f5b01b0fb8, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4743cc9f32c7ea84da94a1cb4a44a82c, type: 2}
+    - target: {fileID: 3822412314609127746, guid: af58d378c1c94b74b84a84f5b01b0fb8, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4743cc9f32c7ea84da94a1cb4a44a82c, type: 2}
     - target: {fileID: 5655507226949173154, guid: af58d378c1c94b74b84a84f5b01b0fb8, type: 3}
       propertyPath: _targetTransform
       value: 
       objectReference: {fileID: 1623943412174167563}
     - target: {fileID: 6374999549498246502, guid: af58d378c1c94b74b84a84f5b01b0fb8, type: 3}
       propertyPath: m_Name
-      value: MarkerBlack
+      value: MarkerOrange
       objectReference: {fileID: 0}
     - target: {fileID: 8863917780668674788, guid: af58d378c1c94b74b84a84f5b01b0fb8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5201,9 +5400,10 @@ MonoBehaviour:
   isSphere: 0
   useConstantSize: 1
   size: 0.01
-  color: {r: 0, g: 0, b: 0, a: 1}
+  color: {r: 1, g: 0.6, b: 0, a: 1}
   sphereCollider: {fileID: 0}
   meshCollider: {fileID: 8194146820288921209}
+  drawingSound: {fileID: 8300000, guid: 166d993656d4e6847b4d9eae4a42762f, type: 3}
 --- !u!4 &8052575206223297567 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 165489503345234160, guid: af58d378c1c94b74b84a84f5b01b0fb8, type: 3}
@@ -5268,7 +5468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5295816986398038663, guid: 0ffe77cd8f182aa44ad68481ba8d7b81, type: 3}
       propertyPath: m_Name
-      value: MarkerDarkGreen
+      value: MarkerBlue
       objectReference: {fileID: 0}
     - target: {fileID: 5833360177372915474, guid: 0ffe77cd8f182aa44ad68481ba8d7b81, type: 3}
       propertyPath: instanceId
@@ -5278,6 +5478,14 @@ PrefabInstance:
       propertyPath: id
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6969682508851307463, guid: 0ffe77cd8f182aa44ad68481ba8d7b81, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4ed7ada26748c7c4680c3b6f491a31eb, type: 2}
+    - target: {fileID: 6969682508851307463, guid: 0ffe77cd8f182aa44ad68481ba8d7b81, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4ed7ada26748c7c4680c3b6f491a31eb, type: 2}
     m_RemovedComponents:
     - {fileID: 6791590557183806854, guid: 0ffe77cd8f182aa44ad68481ba8d7b81, type: 3}
     m_RemovedGameObjects: []
@@ -5319,9 +5527,10 @@ MonoBehaviour:
   isSphere: 0
   useConstantSize: 1
   size: 0.01
-  color: {r: 0.14133258, g: 0.33962262, b: 0.039729424, a: 1}
+  color: {r: 0.078431375, g: 0, b: 1, a: 1}
   sphereCollider: {fileID: 0}
   meshCollider: {fileID: 739352648134565490}
+  drawingSound: {fileID: 8300000, guid: 166d993656d4e6847b4d9eae4a42762f, type: 3}
 --- !u!1 &2782217373527243976 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5295816986398038663, guid: 0ffe77cd8f182aa44ad68481ba8d7b81, type: 3}

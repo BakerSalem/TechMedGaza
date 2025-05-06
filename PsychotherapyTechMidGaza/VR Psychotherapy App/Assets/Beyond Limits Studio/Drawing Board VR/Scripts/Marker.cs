@@ -34,7 +34,11 @@ namespace BeyondLimitsStudios
             [SerializeField]
             [Tooltip("MeshCollider used to detect collision with board (used only if isSphere is disabled).")]
             private MeshCollider meshCollider;
+            [SerializeField]
+            [Tooltip("Sound to play while drawing")]
+            private AudioClip drawingSound;
 
+            private AudioSource audioSource;
             private MeshVertexInfo[] verticesInfo;
 
             private Dictionary<GameObject, DrawingBoard> boards = new Dictionary<GameObject, DrawingBoard>();
@@ -89,6 +93,10 @@ namespace BeyondLimitsStudios
                         meshCollider.enabled = false;
                     }
                 }
+                audioSource = gameObject.AddComponent<AudioSource>();
+                audioSource.clip = drawingSound;
+                audioSource.loop = true;
+                audioSource.playOnAwake = false;
             }
 
             public void SetColor(Color col)
@@ -132,7 +140,7 @@ namespace BeyondLimitsStudios
                     {
                         boards[other.gameObject].StartDrawing(this, verticesInfo, color);
                     }
-
+                    audioSource.Play();
                     //if (isSphere)
                     //    boards[other.gameObject].StartDrawing(this.gameObject, this.transform.position, useConstantSize ? size : 0.25f * Mathf.Sqrt(Mathf.Max(0f, Mathf.Pow(2 * sphereCollider.radius * this.transform.localScale.x, 2) - Mathf.Pow(boards[other.gameObject].GetDistanceToBoard(this.transform.position), 2))), color);
                     //else
@@ -176,6 +184,10 @@ namespace BeyondLimitsStudios
                 {
                     boards[other.gameObject].StopDrawing(this);
                     boards.Remove(other.gameObject);
+                    if (boards.Count == 0 && audioSource.isPlaying)
+                    {
+                        audioSource.Stop();
+                    }
                 }
             }
 

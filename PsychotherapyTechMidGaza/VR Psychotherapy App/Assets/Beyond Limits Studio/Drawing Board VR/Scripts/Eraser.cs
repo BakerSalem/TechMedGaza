@@ -19,7 +19,11 @@ namespace BeyondLimitsStudios
             [SerializeField]
             [Tooltip("MeshCollider used to detect collision with board (used only if isBox is disabled).")]
             private MeshCollider meshCollider;
+            [SerializeField]
+            [Tooltip("Sound to play while drawing")]
+            private AudioClip eraserSound;
 
+            private AudioSource audioSource;
             private MeshVertexInfo[] verticesInfo;
 
             private Dictionary<GameObject, DrawingBoard> boards = new Dictionary<GameObject, DrawingBoard>();
@@ -39,6 +43,10 @@ namespace BeyondLimitsStudios
                             return;
                         }
                     }
+                    audioSource = gameObject.AddComponent<AudioSource>();
+                    audioSource.clip = eraserSound;
+                    audioSource.loop = true;
+                    audioSource.playOnAwake = false;
                 }
                 else
                 {
@@ -84,7 +92,10 @@ namespace BeyondLimitsStudios
                 {
                     boards.Add(other.gameObject, other.gameObject.GetComponent<DrawingBoard>());
                     if (isBox)
+                    {
                         boards[other.gameObject].StartErasing(this, boxCollider);
+                        audioSource.Play();
+                    }
                     else
                         boards[other.gameObject].StartErasing(this, verticesInfo);
                 }
@@ -107,6 +118,7 @@ namespace BeyondLimitsStudios
                 {
                     boards[other.gameObject].StopErasing(this);
                     boards.Remove(other.gameObject);
+                    audioSource.Stop();
                 }
             }
 
