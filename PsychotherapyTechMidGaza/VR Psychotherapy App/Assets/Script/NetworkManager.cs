@@ -1,3 +1,4 @@
+using BeyondLimitsStudios.VRInteractables;
 using SocketIO;
 using UnityEngine;
 using static JsonClasses;
@@ -150,6 +151,19 @@ public class NetworkManager : MonoBehaviour
             Debug.Log("Received Stop Voice ");
             voiceToggle.StopVoice();
         });
+
+        SocketIO.On("markerUpdate", (response) =>
+        {
+            DrawJson data = JsonUtility.FromJson<DrawJson>(response.data.ToString());
+            ApplyMarkerMovement(data);
+        });
+
+        SocketIO.On("eraserUpdate", (response) =>
+        {
+            DrawJson data = JsonUtility.FromJson<DrawJson>(response.data.ToString());
+            ApplyEraserMovement(data);
+        });
+
     }
 
     private void Update()
@@ -263,6 +277,35 @@ public class NetworkManager : MonoBehaviour
             adminCandle.SetActive(data.isActive);
         }
     }
+
+    private void ApplyMarkerMovement(DrawJson data)
+    {
+        MarkerMovementSync markerSync = FindAnyObjectByType<MarkerMovementSync>();
+        if (markerSync == null) return;
+
+        foreach (Transform parent in markerSync.markerParents)
+        {
+            Marker marker = parent.GetComponentInChildren<Marker>();
+            if (marker != null && marker.MarkerId == data.ID)
+            {
+                parent.position = new Vector3(data.position[0], data.position[1], data.position[2]);
+                parent.eulerAngles = new Vector3(data.rotation[0], data.rotation[1], data.rotation[2]);
+                return;
+            }
+        }
+
+        Debug.LogWarning($"Marker with ID '{data.ID}' not found in markerParents.");
+    }
+
+    private void ApplyEraserMovement(DrawJson data)
+    {
+        EraserMovementSync eraserSync = FindAnyObjectByType<EraserMovementSync>();
+        if (eraserSync != null)
+            eraserSync.eraserTransform.position = new Vector3(data.position[0], data.position[1], data.position[2]);
+            eraserSync.eraserTransform.eulerAngles = new Vector3(data.rotation[0], data.rotation[1], data.rotation[2]);
+    }
+
+
 
     public void FlipCardSend(string id)
     {

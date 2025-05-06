@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Timeline;
 using static BeyondLimitsStudios.VRInteractables.DrawingBoardUtils;
 
 namespace BeyondLimitsStudios
@@ -9,6 +10,10 @@ namespace BeyondLimitsStudios
     {
         public class Marker : MonoBehaviour
         {
+            [Tooltip("Give Id for Marker")]
+            public string id;
+            public string MarkerId => id;
+
             [SerializeField]
             [Tooltip("Does the marker use SphereCollider or MeshCollider.")]
             private bool isSphere = true;
@@ -62,7 +67,7 @@ namespace BeyondLimitsStudios
                             this.enabled = false;
                             return;
                         }
-                    }                    
+                    }
 
                     if (DrawingBoardSettings.computedMeshes.ContainsKey(meshCollider.sharedMesh))
                     {

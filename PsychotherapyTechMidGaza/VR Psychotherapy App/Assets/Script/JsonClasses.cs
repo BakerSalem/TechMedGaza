@@ -44,12 +44,20 @@ public class JsonClasses
     {
         public string ID;
         public int speed;
-        
+
         public CarJson() { }
 
         public CarJson(string ID, int speed)
         {
         }
+    }
+
+    [Serializable]
+    public class DrawJson
+    {
+        public string ID;
+        public float[] position;
+        public float[] rotation;
     }
 
 }
