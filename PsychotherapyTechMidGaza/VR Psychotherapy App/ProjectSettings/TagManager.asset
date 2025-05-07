@@ -7,6 +7,7 @@ TagManager:
   - projectile
   - FxTemporaire
   - Whiteboard
+  - Write
   layers:
   - Default
   - TransparentFX
