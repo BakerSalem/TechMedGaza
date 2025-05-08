@@ -60,4 +60,10 @@ public class JsonClasses
         public float[] rotation;
     }
 
+    [System.Serializable]
+    public class TextData
+    {
+        public string Text;
+    }
+
 }

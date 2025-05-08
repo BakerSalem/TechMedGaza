@@ -10,70 +10,77 @@ public class ValidateOfTMPTextValue : ValidateOfArabic
     #region UI References
     [Header("UI References")]
     [SerializeField] private TMP_Text fixTxt; // Reference to the Text component to display the fixed text
+    [SerializeField] private TMP_Text orgTxt;
+    private string currentText = "";
+
     #endregion
 
     #region Unity Methods
     private void Start()
     {
         // Validate the initial text
-        ValidateInput(fixTxt.text);
+        ValidateInput(orgTxt.text);
+        ValidateInput(currentText);
     }
     #endregion
 
     #region Validation Methods
+
+    public void AddOrginalText(string value)
+    {
+        currentText += value;
+        orgTxt.text = currentText;
+        ValidateInput(currentText);
+        NetworkManager.Instance?.SendText(currentText);
+    }
+
     /// <summary>
     /// Validates the input text based on the selected language options.
     /// </summary>
     /// <param name="input">The input text to be validated.</param>
     public void ValidateInput(string input)
     {
-        // Filter the input based on the selected language options
         string filteredInput = FilterCharacters(input);
-
-        // Enforce character limits
         if (filteredInput.Length > maxCharacterLimit)
         {
             filteredInput = filteredInput.Substring(0, maxCharacterLimit);
         }
-
-        //if (filteredInput.Length < minCharacterLimit)
-        //{
-        //    Debug.LogWarning($"Input text is shorter than the minimum limit of {minCharacterLimit} characters.");
-        //    return;
-        //}
-
-        // Fix and display the filtered input
         Fix(filteredInput);
     }
 
     /// <summary>
     /// Appends a character or string to the current text, then validates and fixes it.
     /// </summary>
-    public void AppendInput(string input)
-    {
-        string newText = fixTxt.text + input;
-        string filteredInput = FilterCharacters(newText);
-
-        if (filteredInput.Length > maxCharacterLimit)
-            filteredInput = filteredInput.Substring(0, maxCharacterLimit);
-
-        Fix(filteredInput);
-    }
-
-    /// <summary>
-    /// Deletes the last character from the current text, then validates and fixes it.
-    /// </summary>
     public void DeleteLastCharacter()
     {
-        if (fixTxt.text.Length > 0)
+        if (currentText.Length > 0)
         {
-            string newText = fixTxt.text.Substring(0, fixTxt.text.Length - 1);
-            string filteredInput = FilterCharacters(newText);
-
-            Fix(filteredInput);
+            currentText = currentText.Substring(0, currentText.Length - 1);
+            orgTxt.text = currentText;
+            ValidateInput(currentText);
+            NetworkManager.Instance?.SendText(currentText);
         }
     }
-
+    /// <summary>
+    /// Clears all input text.
+    /// </summary>
+    public void ClearAllText()
+    {
+        currentText = "";
+        orgTxt.text = "";
+        ValidateInput(currentText);
+        NetworkManager.Instance?.SendText(currentText);
+    }
+    public void AddSpace()
+    {
+        AddOrginalText("  ");
+    }
+    public void ApplyRemoteText(string text)
+    {
+        currentText = text;
+        orgTxt.text = text;
+        ValidateInput(text);
+    }
     #endregion
 
     #region Fix Method
@@ -85,7 +92,7 @@ public class ValidateOfTMPTextValue : ValidateOfArabic
     {
         if (haveArabicLetters)
         {
-            fixTxt.text += ArabicSupport.Fix(txt, true, true);
+            fixTxt.text = ArabicSupport.Fix(txt, true, true);
         }
         else
         {

@@ -3,11 +3,9 @@ using SocketIO;
 using UnityEngine;
 using static JsonClasses;
 
-
-
-
 public class NetworkManager : MonoBehaviour
 {
+    #region Variables
     public SocketIOComponent SocketIO;
     public static NetworkManager Instance;
     public Transform camTransform;
@@ -27,9 +25,12 @@ public class NetworkManager : MonoBehaviour
     public CardsControl cardsControl;
     public CarManager carManager;
     public VoiceToggle voiceToggle;
+    public ModeToggle ModeToggle;
 
     private string currentApp = "";
+    #endregion
 
+    #region Unity Setup
     private void Start()
     {
         if (Instance == null)
@@ -152,6 +153,46 @@ public class NetworkManager : MonoBehaviour
             voiceToggle.StopVoice();
         });
 
+        SocketIO.On("drawShow", (response) =>
+        {
+            Debug.Log("Received Show Draw Board ");
+            ModeToggle.ShowDrawBoard();
+        });
+
+        SocketIO.On("writeShow", (response) =>
+        {
+            Debug.Log("Received Show Write Board");
+            ModeToggle.ShowWriteBoard();
+        });
+
+        SocketIO.On("engShow", (response) =>
+        {
+            Debug.Log("Received Show English Keyboard  ");
+            ModeToggle.ShowEngKey();
+        });
+
+        SocketIO.On("arbShow", (response) =>
+        {
+            Debug.Log("Received Show Arabic Keyboard ");
+            ModeToggle.ShowArbKey();
+        });
+
+        SocketIO.On("textUpdate", response =>
+        {
+            TextData data = JsonUtility.FromJson<TextData>(response.data.ToString());
+            ValidateOfTMPTextValue validator = FindAnyObjectByType<ValidateOfTMPTextValue>();
+
+            ValidateOfTMPTextValue[] validators = FindObjectsByType<ValidateOfTMPTextValue>(
+            FindObjectsInactive.Include,
+            FindObjectsSortMode.None
+            );
+
+            foreach (var v in validators)
+            {
+                v.ApplyRemoteText(data.Text);
+            }
+        });
+
         SocketIO.On("markerUpdate", (response) =>
         {
             DrawJson data = JsonUtility.FromJson<DrawJson>(response.data.ToString());
@@ -165,12 +206,14 @@ public class NetworkManager : MonoBehaviour
         });
 
     }
-
     private void Update()
     {
         SendCameraData();
         SendHandData();
     }
+    #endregion
+
+    #region Send SocketIO
     public void SendCameraData()
     {
         if (canSync)
@@ -251,7 +294,17 @@ public class NetworkManager : MonoBehaviour
 
         SocketIO.Emit("appSelect", new JSONObject(json));
     }
+    // inside NetworkManager class
+    public void SendText(string text)
+    {
+        if (!canSync) return;
+        TextData payload = new() { Text = text };
+        string json = JsonUtility.ToJson(payload);
+        SocketIO.Emit("textUpdate", new JSONObject(json));
+    }
+    #endregion
 
+    #region ApplyControlData
     private void ApplyCameraData(CameraData camData)
     {
         adminCamera.gameObject.SetActive(true);
@@ -277,7 +330,6 @@ public class NetworkManager : MonoBehaviour
             adminCandle.SetActive(data.isActive);
         }
     }
-
     private void ApplyMarkerMovement(DrawJson data)
     {
         MarkerMovementSync markerSync = FindAnyObjectByType<MarkerMovementSync>();
@@ -296,17 +348,16 @@ public class NetworkManager : MonoBehaviour
 
         Debug.LogWarning($"Marker with ID '{data.ID}' not found in markerParents.");
     }
-
     private void ApplyEraserMovement(DrawJson data)
     {
         EraserMovementSync eraserSync = FindAnyObjectByType<EraserMovementSync>();
         if (eraserSync != null)
             eraserSync.eraserTransform.position = new Vector3(data.position[0], data.position[1], data.position[2]);
-            eraserSync.eraserTransform.eulerAngles = new Vector3(data.rotation[0], data.rotation[1], data.rotation[2]);
+        eraserSync.eraserTransform.eulerAngles = new Vector3(data.rotation[0], data.rotation[1], data.rotation[2]);
     }
+    #endregion
 
-
-
+    #region Send Emit
     public void FlipCardSend(string id)
     {
         CardJson cardData = new CardJson { ID = id };
@@ -353,6 +404,23 @@ public class NetworkManager : MonoBehaviour
     {
         SocketIO.Emit("stopVoice");
     }
+    public void DrawShowSend()
+    {
+        SocketIO.Emit("drawShow");
+    }
+    public void WriteShowSend()
+    {
+        SocketIO.Emit("writeShow");
+    }
+    public void EngShowSend()
+    {
+        SocketIO.Emit("engShow");
+    }
+    public void ArbShowSend()
+    {
+        SocketIO.Emit("arbShow");
+    }
+    #endregion
 }
 
 

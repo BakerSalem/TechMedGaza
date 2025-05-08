@@ -13,40 +13,68 @@ public class KeyboardButton : MonoBehaviour
     [Header("Button Properties")]
     public KeyboardButtonType buttonType = KeyboardButtonType.Character;
     [SerializeField] private string keyValue;
-    [SerializeField] private ValidateOfInputField textValidator;
+    [SerializeField] private ValidateOfTMPTextValue textEnglishValidator;
+    [SerializeField] private ValidateOfTMPTextValue textArabicValidator;
+    [SerializeField] private bool isAarbic = false;
 
     private float pressCooldown = 0.3f;
     private float lastPressTime;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Write") && Time.time - lastPressTime > pressCooldown)
+        if (other.CompareTag("Write") && Time.time - lastPressTime > pressCooldown && !isAarbic)
         {
-            PressKey();
+            PressEnglishKey();
+            lastPressTime = Time.time;
+        }
+
+        if (other.CompareTag("Write") && Time.time - lastPressTime > pressCooldown && isAarbic)
+        {
+            PressAarbicKey();
             lastPressTime = Time.time;
         }
     }
 
-    public void PressKey()
+    public void PressEnglishKey()
     {
-        if (textValidator == null)
+        if (textEnglishValidator == null)
             return;
 
         switch (buttonType)
         {
             case KeyboardButtonType.Character:
-                textValidator.ValidateInput(keyValue);
+                textEnglishValidator.AddOrginalText(keyValue);
                 break;
 
             case KeyboardButtonType.Space:
-                textValidator.ValidateInput(" ");
+                textEnglishValidator.AddSpace();
                 break;
 
             case KeyboardButtonType.Delete:
-                textValidator.DeleteLastCharacter();
+                textEnglishValidator.DeleteLastCharacter();
                 break;
             case KeyboardButtonType.Clear:
-                textValidator.ClearAllText();
+                textEnglishValidator.ClearAllText();
+                break;
+        }
+    }
+    public void PressAarbicKey()
+    {
+        if (textArabicValidator == null)
+            return;
+        switch (buttonType)
+        {
+            case KeyboardButtonType.Character:
+                textArabicValidator.AddOrginalText(keyValue);
+                break;
+            case KeyboardButtonType.Space:
+                textArabicValidator.AddSpace();
+                break;
+            case KeyboardButtonType.Delete:
+                textArabicValidator.DeleteLastCharacter();
+                break;
+            case KeyboardButtonType.Clear:
+                textArabicValidator.ClearAllText();
                 break;
         }
     }

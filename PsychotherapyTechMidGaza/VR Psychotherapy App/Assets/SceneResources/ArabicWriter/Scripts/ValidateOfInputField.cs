@@ -21,9 +21,6 @@ public class ValidateOfInputField : ValidateOfArabic
     {
         // Set the character limit for the InputField
         inputField.characterLimit = maxCharacterLimit;
-
-        // Add a listener to validate input as the user types
-        inputField.onValueChanged.AddListener(ValidateInput);
     }
     #endregion
 
@@ -69,7 +66,6 @@ public class ValidateOfInputField : ValidateOfArabic
         currentText = "";
         Fix(currentText);
     }
-
     #endregion
 
     #region Fix Method
