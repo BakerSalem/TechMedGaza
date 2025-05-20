@@ -7066,6 +7066,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Env Guest
       objectReference: {fileID: 0}
+    - target: {fileID: 5682678747349666220, guid: 9107a583d772f824586c4181a95ab4d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6550329159456872397, guid: 9107a583d772f824586c4181a95ab4d7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -13028,7 +13032,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1251107312}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cc5c234723e3a54d8dd09b131117743, type: 3}
   m_Name: 
@@ -14658,6 +14662,10 @@ PrefabInstance:
     - target: {fileID: 954041286493366070, guid: cc8efb841f9d45c4b85b38c14850be9b, type: 3}
       propertyPath: m_Name
       value: Eye_Movment
+      objectReference: {fileID: 0}
+    - target: {fileID: 954041286493366070, guid: cc8efb841f9d45c4b85b38c14850be9b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2210628320036760267, guid: cc8efb841f9d45c4b85b38c14850be9b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17510,6 +17518,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deeb_Breath
       objectReference: {fileID: 0}
+    - target: {fileID: 3924721396044352459, guid: 413a010dd96ce4f44baf298adaa0359b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17696,10 +17708,10 @@ MonoBehaviour:
   adminCamera: {fileID: 0}
   playerBody: {fileID: 2065327454}
   applications:
-  - {fileID: 1631892846}
   - {fileID: 1913920551}
-  - {fileID: 711787557}
+  - {fileID: 1631892846}
   - {fileID: 1364283756}
+  - {fileID: 711787557}
   - {fileID: 699883158}
   - {fileID: 1865222985}
   leftHandTransform: {fileID: 1931785630}
@@ -17931,7 +17943,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1656164076}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cc5c234723e3a54d8dd09b131117743, type: 3}
   m_Name: 
@@ -20326,6 +20338,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Empty Chair
       objectReference: {fileID: 0}
+    - target: {fileID: 1639751517934510592, guid: 9b588d11d3f606445b87cc4eefb42eaa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6118134832296373020, guid: 9b588d11d3f606445b87cc4eefb42eaa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -20814,6 +20830,10 @@ PrefabInstance:
     - target: {fileID: 5548082094238268250, guid: 5de4da9088d5e82459b9857f479db809, type: 3}
       propertyPath: m_Name
       value: Draw Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 5548082094238268250, guid: 5de4da9088d5e82459b9857f479db809, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

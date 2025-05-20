@@ -12,9 +12,12 @@ public class HandSpawnBlock : MonoBehaviour
 
     void Update()
     {
+        if (DetectHand == null || handHoldPoint == null)
+            return;
+
         bool isPinching = DetectHand.GetFingerIsPinching(OVRHand.HandFinger.Index) ||
-            DetectHand.GetFingerIsPinching(OVRHand.HandFinger.Middle) ||
-            DetectHand.GetFingerIsPinching(OVRHand.HandFinger.Ring);
+                          DetectHand.GetFingerIsPinching(OVRHand.HandFinger.Middle) ||
+                          DetectHand.GetFingerIsPinching(OVRHand.HandFinger.Ring);
 
         // Only do something when the pinch state changes
         if (isPinching != lastPinchState)

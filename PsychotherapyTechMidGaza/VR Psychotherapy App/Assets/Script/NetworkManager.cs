@@ -64,7 +64,7 @@ public class NetworkManager : MonoBehaviour
 
             currentApp = appData.ID;
 
-            if (currentApp == "Five Senses")
+            if (currentApp == "Deeb_Breath")
             {
                 if (adminRose != null) adminRose.SetActive(true);
                 if (adminCandle != null) adminCandle.SetActive(true);
@@ -294,7 +294,6 @@ public class NetworkManager : MonoBehaviour
 
         SocketIO.Emit("appSelect", new JSONObject(json));
     }
-    // inside NetworkManager class
     public void SendText(string text)
     {
         if (!canSync) return;
