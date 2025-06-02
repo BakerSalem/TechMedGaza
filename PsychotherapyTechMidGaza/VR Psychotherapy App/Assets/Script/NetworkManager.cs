@@ -16,13 +16,15 @@ public class NetworkManager : MonoBehaviour
     public Transform rightHandTransform;
     public Transform adminLeftHand;
     public Transform adminRightHand;
-    public bool canSync;
-
     public GameObject adminRose;
     public GameObject adminCandle;
+    public bool canSync;
 
-    public PandolManager pandolManager;
-    public CardsControl cardsControl;
+    #region State of Rest
+    //public PandolManager pandolManager;
+    //public CardsControl cardsControl;
+    #endregion
+
     public CarManager carManager;
     public VoiceToggle voiceToggle;
     public ModeToggle ModeToggle;
@@ -90,30 +92,34 @@ public class NetworkManager : MonoBehaviour
             canSync = true;
         });
 
-        SocketIO.On("cardFlip", (response) =>
-        {
-            Debug.Log("Received Card Flip: " + response);
-            CardJson cardData = JsonUtility.FromJson<CardJson>(response.data.ToString());
-            cardsControl.OnCardSync(cardData.ID);
-        });
+        #region State of Rest
 
-        SocketIO.On("flipAllCards", _ =>
-        {
-            Debug.Log("Received Show All Cards");
-            cardsControl.FlipAllCards();
-        });
+        /*  SocketIO.On("cardFlip", (response) =>
+          {
+              Debug.Log("Received Card Flip: " + response);
+              CardJson cardData = JsonUtility.FromJson<CardJson>(response.data.ToString());
+              cardsControl.OnCardSync(cardData.ID);
+          });*/
 
-        SocketIO.On("startPandol", _ =>
+        /* SocketIO.On("flipAllCards", _ =>
+         {
+             Debug.Log("Received Show All Cards");
+             cardsControl.FlipAllCards();
+         });*/
+
+        /*SocketIO.On("startPandol", _ =>
         {
             Debug.Log("Received Pandol Start ");
             pandolManager.StartPandol();
-        });
+        });*/
 
-        SocketIO.On("stopPandol", _ =>
+        /*SocketIO.On("stopPandol", _ =>
         {
             Debug.Log("Received Pandol Stop ");
             pandolManager.StopPandol();
-        });
+        });*/
+
+        #endregion
 
         SocketIO.On("carSpeed", (response) =>
         {
