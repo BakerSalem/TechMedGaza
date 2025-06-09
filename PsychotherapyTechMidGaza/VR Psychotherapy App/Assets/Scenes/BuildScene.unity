@@ -1006,7 +1006,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 80271425}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
   m_Name: 
@@ -7120,17 +7120,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8184145086990199896, guid: 9107a583d772f824586c4181a95ab4d7, type: 3}
   m_PrefabInstance: {fileID: 711787556}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &711787558 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3326012474266511141, guid: 9107a583d772f824586c4181a95ab4d7, type: 3}
-  m_PrefabInstance: {fileID: 711787556}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61bb9a0d5f211054d9d225eabb52a113, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &711787559 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6550329159456872397, guid: 9107a583d772f824586c4181a95ab4d7, type: 3}
@@ -14717,17 +14706,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 784966459540918963, guid: cc8efb841f9d45c4b85b38c14850be9b, type: 3}
   m_PrefabInstance: {fileID: 1364283755}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1364283757 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4916030878262506042, guid: cc8efb841f9d45c4b85b38c14850be9b, type: 3}
-  m_PrefabInstance: {fileID: 1364283755}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a183ec2f402b55459ae84eaac8c551f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1364283758 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2210628320036760267, guid: cc8efb841f9d45c4b85b38c14850be9b, type: 3}
@@ -17718,11 +17696,9 @@ MonoBehaviour:
   rightHandTransform: {fileID: 735096164}
   adminLeftHand: {fileID: 0}
   adminRightHand: {fileID: 0}
-  canSync: 0
   adminRose: {fileID: 1149938739}
   adminCandle: {fileID: 940979921}
-  pandolManager: {fileID: 1364283757}
-  cardsControl: {fileID: 711787558}
+  canSync: 0
   carManager: {fileID: 1631892847}
   voiceToggle: {fileID: 699883159}
   ModeToggle: {fileID: 1976056405}
