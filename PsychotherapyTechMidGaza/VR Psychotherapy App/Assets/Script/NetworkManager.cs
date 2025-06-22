@@ -92,6 +92,12 @@ public class NetworkManager : MonoBehaviour
             canSync = true;
         });
 
+        SocketIO.On("objectMove", (response) =>
+        {
+            MoveData data = JsonUtility.FromJson<MoveData>(response.data.ToString());
+            ApplyMoveData(data);
+        });
+
         #region State of Rest
 
         /*  SocketIO.On("cardFlip", (response) =>
@@ -307,6 +313,18 @@ public class NetworkManager : MonoBehaviour
         string json = JsonUtility.ToJson(payload);
         SocketIO.Emit("textUpdate", new JSONObject(json));
     }
+    public void SendMoveData(string id, Vector3 pos)
+    {
+        MoveData data = new MoveData
+        {
+            ID = id,
+            position = new float[] { pos.x, pos.y, pos.z }
+        };
+
+        string json = JsonUtility.ToJson(data);
+        SocketIO.Emit("objectMove", new JSONObject(json));
+    }
+
     #endregion
 
     #region ApplyControlData
@@ -360,6 +378,20 @@ public class NetworkManager : MonoBehaviour
             eraserSync.eraserTransform.position = new Vector3(data.position[0], data.position[1], data.position[2]);
         eraserSync.eraserTransform.eulerAngles = new Vector3(data.rotation[0], data.rotation[1], data.rotation[2]);
     }
+    private void ApplyMoveData(MoveData data)
+    {
+        MoveObject[] moveObjects = FindObjectsByType<MoveObject>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+
+        foreach (var obj in moveObjects)
+        {
+            if (obj.objectID == data.ID)
+            {
+                obj.transform.position = new Vector3(data.position[0], data.position[1], data.position[2]);
+                break;
+            }
+        }
+    }
+
     #endregion
 
     #region Send Emit

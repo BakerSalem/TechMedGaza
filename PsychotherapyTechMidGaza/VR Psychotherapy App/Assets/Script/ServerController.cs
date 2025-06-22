@@ -7,10 +7,13 @@ public class ServerController : MonoBehaviour
 {
 
     [Header("Set this to the folder where server.js is located")]
-    public string nodeProjectPath = @"D:\Unity Project\TechMedGazaPsyServer";
+    // public string nodeProjectPath = @"D:\Unity Project\TechMedGazaPsyServer";
+    public string nodeProjectPath;
+    private Process process;
 
     void Start()
     {
+        nodeProjectPath = System.IO.Path.Combine(Application.dataPath, "TechMedGazaPsyServer");
         RunNodeServer();
     }
 
@@ -18,29 +21,36 @@ public class ServerController : MonoBehaviour
     {
         KillAllNodeProcesses();
     }
+
     [ContextMenu("RunNodeServer")]
 
     public void RunNodeServer()
     {
-        ProcessStartInfo psi = new ProcessStartInfo();
-        psi.FileName = "cmd.exe";
-        psi.WorkingDirectory = nodeProjectPath;
-        psi.Arguments = "/C node server.js";
-        psi.CreateNoWindow = true;
-        psi.UseShellExecute = false;
-        psi.RedirectStandardOutput = true;
-        psi.RedirectStandardError = true;
+        ProcessStartInfo psi = new ProcessStartInfo
+        {
+            FileName = "cmd.exe",
+            WorkingDirectory = nodeProjectPath,
+            Arguments = "/C node server.js",
+            CreateNoWindow = true,
+            UseShellExecute = false,
+            RedirectStandardOutput = true,
+            RedirectStandardError = true
+        };
 
-        Process process = new();
-        process.StartInfo = psi;
+        process = new Process
+        {
+            StartInfo = psi
+        };
 
         process.OutputDataReceived += (sender, e) =>
         {
-            if (!string.IsNullOrEmpty(e.Data)) UnityEngine.Debug.Log("OUT: " + e.Data);
+            if (!string.IsNullOrEmpty(e.Data))
+                UnityEngine.Debug.Log("OUT: " + e.Data);
         };
         process.ErrorDataReceived += (sender, e) =>
         {
-            if (!string.IsNullOrEmpty(e.Data)) UnityEngine.Debug.LogError("ERR: " + e.Data);
+            if (!string.IsNullOrEmpty(e.Data))
+                UnityEngine.Debug.LogError("ERR: " + e.Data);
         };
 
         process.Start();

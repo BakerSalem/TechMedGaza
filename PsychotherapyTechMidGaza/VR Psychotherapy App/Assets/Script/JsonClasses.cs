@@ -66,4 +66,12 @@ public class JsonClasses
         public string Text;
     }
 
+    [System.Serializable]
+    public class MoveData
+    {
+        public string ID;
+        public float[] position;
+    }
+
+
 }
