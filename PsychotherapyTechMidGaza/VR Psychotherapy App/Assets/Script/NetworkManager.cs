@@ -26,7 +26,7 @@ public class NetworkManager : MonoBehaviour
     #endregion
 
     public CarManager carManager;
-    public VoiceToggle voiceToggle;
+    public VoiceToggle[] voiceToggle;
     public ModeToggle ModeToggle;
 
     private string currentApp = "";
@@ -156,13 +156,21 @@ public class NetworkManager : MonoBehaviour
         SocketIO.On("startVoice", _ =>
         {
             Debug.Log("Received Start Voice ");
-            voiceToggle.StartVoice();
+            foreach (var vt in voiceToggle)
+            {
+                if (vt != null)
+                    vt.StartVoice();
+            }
         });
 
         SocketIO.On("stopVoice", _ =>
         {
             Debug.Log("Received Stop Voice ");
-            voiceToggle.StopVoice();
+            foreach (var vt in voiceToggle)
+            {
+                if (vt != null)
+                    vt.StopVoice();
+            }
         });
 
         SocketIO.On("drawShow", (response) =>

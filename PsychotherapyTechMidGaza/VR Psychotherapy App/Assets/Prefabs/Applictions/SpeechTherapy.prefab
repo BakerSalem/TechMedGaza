@@ -303,6 +303,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2210628320036760267}
     m_Modifications:
+    - target: {fileID: 4218629279900977307, guid: bc74e538d58fa504e92c2ec6d2399268, type: 3}
+      propertyPath: acceleration
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4218629279900977307, guid: bc74e538d58fa504e92c2ec6d2399268, type: 3}
+      propertyPath: maxMoveAmount
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4218629279900977307, guid: bc74e538d58fa504e92c2ec6d2399268, type: 3}
+      propertyPath: baseMoveAmount
+      value: 0.02
+      objectReference: {fileID: 0}
     - target: {fileID: 5305367537970599588, guid: bc74e538d58fa504e92c2ec6d2399268, type: 3}
       propertyPath: m_Name
       value: icecream
@@ -366,34 +378,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5305367537970599588, guid: bc74e538d58fa504e92c2ec6d2399268, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5651252276184120183}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc74e538d58fa504e92c2ec6d2399268, type: 3}
 --- !u!4 &4415409246409783656 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5305367537971088004, guid: bc74e538d58fa504e92c2ec6d2399268, type: 3}
   m_PrefabInstance: {fileID: 8423663121383371756}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4415409246409942344 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5305367537970599588, guid: bc74e538d58fa504e92c2ec6d2399268, type: 3}
-  m_PrefabInstance: {fileID: 8423663121383371756}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5651252276184120183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4415409246409942344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90d8c25222fed4046b52552746a1142a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectID: 
-  baseMoveAmount: 0.05
-  acceleration: 0.02
-  maxMoveAmount: 0.5

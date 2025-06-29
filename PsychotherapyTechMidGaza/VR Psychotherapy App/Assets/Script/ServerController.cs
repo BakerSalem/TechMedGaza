@@ -1,20 +1,25 @@
 using System.Collections;
-using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 
 public class ServerController : MonoBehaviour
 {
-
     [Header("Set this to the folder where server.js is located")]
-    // public string nodeProjectPath = @"D:\Unity Project\TechMedGazaPsyServer";
     public string nodeProjectPath;
     private Process process;
 
     void Start()
     {
-        nodeProjectPath = System.IO.Path.Combine(Application.dataPath, "TechMedGazaPsyServer");
-        RunNodeServer();
+        nodeProjectPath = GetServerPath();
+
+        if (System.IO.Directory.Exists(nodeProjectPath))
+        {
+            RunNodeServer();
+        }
+        else
+        {
+            UnityEngine.Debug.LogError("Node project path not found: " + nodeProjectPath);
+        }
     }
 
     private void OnDestroy()
@@ -23,9 +28,16 @@ public class ServerController : MonoBehaviour
     }
 
     [ContextMenu("RunNodeServer")]
-
     public void RunNodeServer()
     {
+        string serverExePath = System.IO.Path.Combine(nodeProjectPath, "server.exe");
+
+        if (!System.IO.File.Exists(serverExePath))
+        {
+            UnityEngine.Debug.LogError("server.exe not found at: " + serverExePath);
+            return;
+        }
+
         ProcessStartInfo psi = new ProcessStartInfo
         {
             FileName = "cmd.exe",
@@ -56,9 +68,6 @@ public class ServerController : MonoBehaviour
         process.Start();
         process.BeginOutputReadLine();
         process.BeginErrorReadLine();
-
-        // Don't wait for exit here if it's a long-running server
-        // process.WaitForExit(); // Optional
     }
 
     [ContextMenu("Force Kill All Node Processes")]
@@ -73,5 +82,13 @@ public class ServerController : MonoBehaviour
         });
     }
 
-
+    private string GetServerPath()
+    {
+#if UNITY_EDITOR
+        return System.IO.Path.Combine(Application.dataPath, "TechMedGazaPsyServer");
+#else
+    string buildFolderPath = System.IO.Path.GetDirectoryName(Application.dataPath);
+    return System.IO.Path.Combine(buildFolderPath, "TechMedGazaPsyServer");
+#endif
+    }
 }
